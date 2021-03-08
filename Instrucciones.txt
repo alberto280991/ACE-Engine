@@ -1,0 +1,10 @@
+Instalar herramientas necesarias:
+    sudo apt install gdebi python-setuptools python-m2crypto python-apsw python-gtk2 python-appindicator
+
+Instalar paquetes de Acestream y dependencias:
+    sudo dpkg -i *.deb
+
+En caso de error de dependencias al instalar acestream-player-data:
+    echo 'deb http://es.archive.ubuntu.com/ubuntu xenial main universe' | sudo tee /etc/apt/sources.list.d/xenial.list && sudo apt update
+    sudo apt install -f
+    sudo rm /etc/apt/sources.list.d/xenial.list
